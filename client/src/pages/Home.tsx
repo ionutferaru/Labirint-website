@@ -1,21 +1,16 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { useCreateInquiry } from "@/hooks/use-inquiries";
-import { api } from "@shared/routes";
 
 // Unsplash Image References
 const HERO_IMG = "https://images.unsplash.com/photo-1574347596001-c8fc47e2468d?q=80&w=2000&auto=format&fit=crop"; // dark luxury champagne
 const ABOUT_IMG = "https://images.unsplash.com/photo-1566847413645-1b250de485cc?q=80&w=800&auto=format&fit=crop"; // elegant dark lounge
 const GALLERY_IMGS = [
-  "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop", // cocktails
-  "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=600&auto=format&fit=crop", // luxury interior
-  "https://images.unsplash.com/photo-1595919318182-14a51e604f2f?q=80&w=600&auto=format&fit=crop", // pouring drink
-  "https://images.unsplash.com/photo-1555597408-26bc8e548a46?q=80&w=600&auto=format&fit=crop", // lounge seating
+  "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=600&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1595919318182-14a51e604f2f?q=80&w=600&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1555597408-26bc8e548a46?q=80&w=600&auto=format&fit=crop",
 ];
 
 const staggerContainer = {
@@ -35,19 +30,6 @@ export default function Home() {
   useEffect(() => {
     document.title = "LABIRINT Gentlemen's Club | Luxury Strip Club";
   }, []);
-
-  const { mutate: createInquiry, isPending } = useCreateInquiry();
-  
-  const form = useForm<z.infer<typeof api.inquiries.create.input>>({
-    resolver: zodResolver(api.inquiries.create.input),
-    defaultValues: { name: "", email: "", message: "" }
-  });
-
-  const onSubmit = (data: z.infer<typeof api.inquiries.create.input>) => {
-    createInquiry(data, {
-      onSuccess: () => form.reset()
-    });
-  };
 
   return (
     <div className="w-full">
@@ -92,10 +74,11 @@ export default function Home() {
             transition={{ duration: 1, delay: 1.5 }}
           >
             <a 
-              href="#contact" 
-              className="inline-block px-10 py-4 bg-transparent border-2 border-[#d4af37] text-[#d4af37] font-sans tracking-widest uppercase text-sm hover:bg-[#d4af37] hover:text-black transition-all duration-500 hover-glow"
+              href="https://wa.me/YOUR_NUMBER_HERE" 
+              target="_blank"
+              className="inline-block px-10 py-4 bg-green-500 text-white font-sans tracking-widest uppercase text-sm hover:bg-green-600 transition-all duration-500 hover-glow"
             >
-              VIP Reservation
+              Contact via WhatsApp
             </a>
           </motion.div>
         </div>
@@ -207,60 +190,24 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             
-            {/* Form */}
+            {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="font-serif text-4xl text-white mb-2">Reservations</h2>
-              <p className="text-primary text-xs tracking-[0.2em] uppercase mb-10">Secure your experience</p>
-              
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div>
-                  <input 
-                    {...form.register("name")}
-                    placeholder="Full Name" 
-                    className="w-full bg-transparent border-b border-white/20 px-0 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors font-sans"
-                  />
-                  {form.formState.errors.name && (
-                    <p className="text-red-500 text-xs mt-1">{form.formState.errors.name.message}</p>
-                  )}
-                </div>
-                
-                <div>
-                  <input 
-                    {...form.register("email")}
-                    placeholder="Email Address" 
-                    type="email"
-                    className="w-full bg-transparent border-b border-white/20 px-0 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors font-sans"
-                  />
-                  {form.formState.errors.email && (
-                    <p className="text-red-500 text-xs mt-1">{form.formState.errors.email.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <textarea 
-                    {...form.register("message")}
-                    placeholder="Request Details (Date, Number of Guests, Special Requirements)" 
-                    rows={4}
-                    className="w-full bg-transparent border-b border-white/20 px-0 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors font-sans resize-none"
-                  />
-                  {form.formState.errors.message && (
-                    <p className="text-red-500 text-xs mt-1">{form.formState.errors.message.message}</p>
-                  )}
-                </div>
-
-                <button 
-                  type="submit"
-                  disabled={isPending}
-                  className="w-full py-4 bg-primary text-black font-sans tracking-widest uppercase text-sm font-semibold hover:bg-white transition-colors duration-300 disabled:opacity-50"
-                >
-                  {isPending ? "Sending..." : "Submit Request"}
-                </button>
-              </form>
+              <h2 className="font-serif text-4xl text-white mb-2">Contact</h2>
+              <p className="text-primary text-xs tracking-[0.2em] uppercase mb-10">
+                Reach out via WhatsApp for reservations or inquiries.
+              </p>
+              <a 
+                href="https://wa.me/YOUR_NUMBER_HERE" 
+                target="_blank"
+                className="inline-block px-10 py-4 bg-green-500 text-white font-sans tracking-widest uppercase text-sm hover:bg-green-600 transition-all duration-500 hover-glow"
+              >
+                WhatsApp
+              </a>
             </motion.div>
 
             {/* Location Info */}
