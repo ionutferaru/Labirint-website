@@ -11,6 +11,15 @@ const menu = [
     ],
   },
   {
+    category: "WHISKY - STICLA (700ml)",
+    items: [
+      { name: "Jack Daniel’s", price: "400 lei" },
+      { name: "Jameson", price: "350 lei" },
+      { name: "Chivas Regal 12", price: "500 lei" },
+      { name: "Black Label", price: "500 lei" },
+    ],
+  },
+  {
     category: "VODKA (50ml)",
     items: [
       { name: "Absolut", price: "35 lei" },
@@ -20,55 +29,95 @@ const menu = [
     ],
   },
   {
-    category: "GIN (50ml)",
+    category: "VODKA - STICLA (700ml)",
     items: [
-      { name: "Beefeater", price: "30 lei" },
-      { name: "Tanqueray", price: "35 lei" },
-      { name: "Hendrick's", price: "40 lei" },
+      { name: "Absolut", price: "350 lei" },
+      { name: "Finlandia", price: "350 lei" },
+      { name: "Grey Goose", price: "550 lei" },
+      { name: "Belvedere", price: "600 lei" },
     ],
   },
   {
     category: "TEQUILA (50ml)",
     items: [
-      { name: "Jose Cuervo", price: "30 lei" },
-      { name: "Patrón Silver", price: "50 lei" },
+      { name: "Camino", price: "30 lei" },
+      { name: "Patron", price: "35 lei" },
     ],
   },
   {
-    category: "RON (50ml)",
+    category: "VIN - STICLA",
     items: [
-      { name: "Bacardi", price: "30 lei" },
-      { name: "Havana Club", price: "35 lei" },
+      { name: "Castel Huniade", price: "160 lei" },
+      { name: "Caii de la Letea", price: "180 lei" },
+      { name: "Purcari 1827", price: "200 lei" },
+      { name: "Recas Muse", price: "250 lei" },
     ],
   },
   {
-    category: "COCKTAILS",
+    category: "LADIES DRINKS",
     items: [
-      { name: "Mojito", price: "40 lei" },
-      { name: "Margarita", price: "45 lei" },
-      { name: "Long Island Iced Tea", price: "50 lei" },
+      { name: "Asti Martini", price: "600 lei" },
+      { name: "Angelli Cuvee Imperial", price: "500 lei" },
+      { name: "Moet", price: "1300 lei" },
+      { name: "Ladies Cocktail", price: "100 lei" },
+      { name: "Pahar Sampanie + fi-GA", price: "150 lei" },
     ],
   },
   {
-    category: "CHAMPAGNE / VIN",
+    category: "SHOTS",
     items: [
-      { name: "Moët & Chandon", price: "350 lei" },
-      { name: "Veuve Clicquot", price: "400 lei" },
-      { name: "Vin roșu / alb / rose", price: "100 lei sticla" },
+      { name: "B52", price: "30 lei" },
+      { name: "Baby Guinness", price: "30 lei" },
+      { name: "Kamikaze", price: "30 lei" },
+      { name: "Goodfather", price: "30 lei" },
+      { name: "Blowjob Shot", price: "30 lei" },
+    ],
+  },
+  {
+    category: "LONG DRINKS",
+    items: [
+      { name: "Vodka + Cola", price: "45 lei" },
+      { name: "Vodka + Sprite", price: "45 lei" },
+      { name: "Vodka + Red Bull", price: "45 lei" },
+      { name: "Vodka + Tonic", price: "45 lei" },
+      { name: "Whisky + Cola", price: "45 lei" },
+      { name: "Whisky + Red Bull", price: "45 lei" },
+      { name: "Gin + Tonic", price: "45 lei" },
+      { name: "Gin + Tonic + Lime", price: "45 lei" },
+      { name: "Gin + Tonic + Portocala", price: "45 lei" },
+      { name: "Gin + Sprite + Lime", price: "45 lei" },
+      { name: "Cuba Libre", price: "45 lei" },
+    ],
+  },
+  {
+    category: "BERE",
+    items: [
+      { name: "Heineken", price: "25 lei" },
+      { name: "Ursus", price: "20 lei" },
+      { name: "Corona", price: "30 lei" },
     ],
   },
   {
     category: "SOFT DRINKS",
     items: [
-      { name: "Coca-Cola / Fanta / Sprite", price: "10 lei" },
-      { name: "Apă minerală / plată", price: "10 lei" },
+      { name: "Cola", price: "20 lei" },
+      { name: "Pepsi", price: "20 lei" },
+      { name: "Sprite", price: "20 lei" },
+      { name: "Santal (1L)", price: "35 lei" },
     ],
   },
   {
-    category: "VIP TABLES & SERVICES",
+    category: "APA",
     items: [
-      { name: "Rezervare masă VIP", price: "200 lei" },
-      { name: "Șampanie la masă", price: "la cerere" },
+      { name: "Apa Plata 0.5L", price: "15 lei" },
+      { name: "Apa Minerala 1L", price: "25 lei" },
+    ],
+  },
+  {
+    category: "ENERGIZANT",
+    items: [
+      { name: "Red Bull", price: "25 lei" },
+      { name: "fi-GA", price: "35 lei" },
     ],
   },
 ];
