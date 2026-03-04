@@ -1,116 +1,100 @@
-import { useEffect } from "react";
-import { motion } from "framer-motion";
-import SectionHeading from "@/components/ui/SectionHeading";
+import React from "react";
 
-// Background image for menu header
-const HEADER_IMG = "https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?q=80&w=2000&auto=format&fit=crop";
-
-const MENU_CATEGORIES = [
+const menu = [
   {
-    title: "Champagne",
+    category: "WHISKY (50ml)",
     items: [
-      { name: "Dom Pérignon Brut", desc: "Vintage excellence, floral and bright" },
-      { name: "Dom Pérignon Rosé", desc: "Sensual, radiant, and complex" },
-      { name: "Armand de Brignac Ace of Spades", desc: "Gold Brut, the pinnacle of luxury" },
-      { name: "Louis Roederer Cristal", desc: "Exquisite texture, notes of white flowers" },
-      { name: "Moët & Chandon Nectar Impérial", desc: "Vibrant, generous and alluring" }
-    ]
+      { name: "Jack Daniel’s", price: "35 lei" },
+      { name: "Jameson", price: "30 lei" },
+      { name: "Chivas Regal 12", price: "40 lei" },
+      { name: "Johnnie Walker Black Label", price: "40 lei" },
+    ],
   },
   {
-    title: "Premium Spirits",
+    category: "VODKA (50ml)",
     items: [
-      { name: "Macallan 25 Year Old", desc: "Single Malt Scotch Whisky" },
-      { name: "Johnnie Walker Blue Label", desc: "Blended Scotch Whisky" },
-      { name: "Clase Azul Tequila Reposado", desc: "Ultra-premium, aged 8 months" },
-      { name: "Don Julio 1942", desc: "Extra Añejo Tequila" },
-      { name: "Louis XIII Cognac", desc: "A blend of up to 1,200 eaux-de-vie" },
-      { name: "Belvedere 10", desc: "Exceptionally rare vodka" }
-    ]
+      { name: "Absolut", price: "35 lei" },
+      { name: "Finlandia", price: "35 lei" },
+      { name: "Grey Goose", price: "45 lei" },
+      { name: "Belvedere", price: "50 lei" },
+    ],
   },
   {
-    title: "Signature Cocktails",
+    category: "GIN (50ml)",
     items: [
-      { name: "The Labirint Reserve", desc: "Clase Azul, Agave, Fresh Lime, Gold Leaf" },
-      { name: "Midnight Velvet", desc: "Belvedere, Espresso, Vanilla liqueur, Cacao" },
-      { name: "Crimson Silk", desc: "Hendrick's, Pomegranate, Rose water, Citrus" },
-      { name: "Smoked Old Fashioned", desc: "Woodford Reserve, Bitters, Hickory smoke" }
-    ]
-  }
+      { name: "Beefeater", price: "30 lei" },
+      { name: "Tanqueray", price: "35 lei" },
+      { name: "Hendrick's", price: "40 lei" },
+    ],
+  },
+  {
+    category: "TEQUILA (50ml)",
+    items: [
+      { name: "Jose Cuervo", price: "30 lei" },
+      { name: "Patrón Silver", price: "50 lei" },
+    ],
+  },
+  {
+    category: "RON (50ml)",
+    items: [
+      { name: "Bacardi", price: "30 lei" },
+      { name: "Havana Club", price: "35 lei" },
+    ],
+  },
+  {
+    category: "COCKTAILS",
+    items: [
+      { name: "Mojito", price: "40 lei" },
+      { name: "Margarita", price: "45 lei" },
+      { name: "Long Island Iced Tea", price: "50 lei" },
+    ],
+  },
+  {
+    category: "CHAMPAGNE / VIN",
+    items: [
+      { name: "Moët & Chandon", price: "350 lei" },
+      { name: "Veuve Clicquot", price: "400 lei" },
+      { name: "Vin roșu / alb / rose", price: "100 lei sticla" },
+    ],
+  },
+  {
+    category: "SOFT DRINKS",
+    items: [
+      { name: "Coca-Cola / Fanta / Sprite", price: "10 lei" },
+      { name: "Apă minerală / plată", price: "10 lei" },
+    ],
+  },
+  {
+    category: "VIP TABLES & SERVICES",
+    items: [
+      { name: "Rezervare masă VIP", price: "200 lei" },
+      { name: "Șampanie la masă", price: "la cerere" },
+    ],
+  },
 ];
 
-export default function Menu() {
-  useEffect(() => {
-    document.title = "Menu | LABIRINT Gentlemen's Club";
-    window.scrollTo(0, 0);
-  }, []);
-
+export default function MenuPage() {
   return (
-    <div className="min-h-screen bg-black pt-24 pb-32">
-      
-      {/* Menu Header */}
-      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center mb-20">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/70 z-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-20" />
-          <img 
-            src={HEADER_IMG} 
-            alt="Bar selection" 
-            className="w-full h-full object-cover opacity-60"
-          />
-        </div>
-        <div className="relative z-30 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-5xl md:text-6xl text-white tracking-widest mb-4"
-          >
-            THE CELLAR
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-primary text-xs tracking-[0.3em] uppercase"
-          >
-            Curated Pours & Vintages
-          </motion.p>
-        </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-white/60 font-sans text-sm italic">
-            "Prices are available upon request. For bottle service and VIP packages, please consult your host."
-          </p>
-        </div>
-
-        <div className="space-y-24">
-          {MENU_CATEGORIES.map((category, idx) => (
-            <motion.div 
-              key={category.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-            >
-              <SectionHeading title={category.title} centered={true} />
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mt-12">
-                {category.items.map((item, itemIdx) => (
-                  <div key={itemIdx} className="border-b border-white/10 pb-4 group">
-                    <h4 className="font-serif text-xl text-white group-hover:text-primary transition-colors duration-300">
-                      {item.name}
-                    </h4>
-                    <p className="text-white/50 text-sm mt-1 font-sans">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
+    <div className="max-w-7xl mx-auto py-20 px-6">
+      <h1 className="text-4xl font-serif text-white mb-10">Our Menu</h1>
+      {menu.map((section, idx) => (
+        <div key={idx} className="mb-12">
+          <h2 className="text-2xl text-gold-gradient font-semibold mb-6">
+            {section.category}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {section.items.map((item, i) => (
+              <div
+                key={i}
+                className="p-4 bg-black/50 border border-white/10 rounded-lg flex justify-between"
+              >
+                <span className="text-white">{item.name}</span>
+                <span className="text-white font-bold">{item.price}</span>
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }
