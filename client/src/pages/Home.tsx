@@ -80,7 +80,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 1.5 }}
           >
             <a
-              href="https://wa.me/+40768526104"
+              href="https://wa.me/40768526104?text=Hello!%20I%20would%20like%20to%20book%20a%20VIP%20table%20at%20LABIRINT%20Gentlemen's%20Club%20in%20Bucharest%20tonight.%20We%20are%20__%20people.%20Do%20you%20have%20availability?"
               target="_blank"
               className="inline-block px-10 py-4 bg-green-500 text-white font-sans tracking-widest uppercase text-sm hover:bg-green-600 transition-all duration-500 hover-glow"
             >
