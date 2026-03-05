@@ -224,7 +224,7 @@ export default function Home() {
                 <div className="space-y-6 text-white/70 text-sm">
                   <div>
                     <h4 className="text-primary font-semibold tracking-wider uppercase mb-1">Address</h4>
-                    <p>123 Luxury Avenue, Metropolis, NY 10001</p>
+                    <p>Clopotarii Vechi 3</p>
                   </div>
                   
                   <div>
