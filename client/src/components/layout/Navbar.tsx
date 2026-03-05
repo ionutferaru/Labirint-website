@@ -66,7 +66,7 @@ export default function Navbar() {
               </Link>
             ))}
          <Link 
-  href="https://wa.me/40721123456?text=Salut!%20Vreau%20să%20rezerv%20la%20LABIRINT%20Gentlemen's%20Club%20Bucharest.%20Pentru%20câteva%20persoane.%20Ce%20disponibilitate%20aveți?%20Mulțumesc!"
+  href="https://wa.me/40768526104?text=Salut!%20Vreau%20să%20rezerv%20la%20LABIRINT%20Gentlemen's%20Club%20Bucharest.%20Pentru%20câteva%20persoane.%20Ce%20disponibilitate%20aveți?%20Mulțumesc!"
   target="_blank"
   rel="noopener noreferrer"
   className="px-6
