@@ -65,13 +65,12 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link 
-              href="/#contact"
-              onClick={() => handleNavClick("/#contact")}
-              className="px-6 py-2 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-all duration-300 text-sm tracking-widest uppercase font-medium hover-glow"
-            >
-              Reserve
-            </Link>
+         <Link 
+  href="https://wa.me/40721123456?text=Salut!%20Vreau%20să%20rezerv%20la%20LABIRINT%20Gentlemen's%20Club%20Bucharest.%20Pentru%20câteva%20persoane.%20Ce%20disponibilitate%20aveți?%20Mulțumesc!"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6
+
           </div>
 
           {/* Mobile Toggle */}
