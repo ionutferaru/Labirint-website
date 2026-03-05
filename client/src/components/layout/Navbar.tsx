@@ -40,7 +40,9 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-          isScrolled ? "bg-black/90 backdrop-blur-md py-4 shadow-lg shadow-primary/5" : "bg-transparent py-6"
+          isScrolled
+            ? "bg-black/90 backdrop-blur-md py-4 shadow-lg shadow-primary/5"
+            : "bg-transparent py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -56,8 +58,8 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link 
-                key={link.label} 
+              <Link
+                key={link.label}
                 href={link.href}
                 onClick={() => handleNavClick(link.href)}
                 className="text-sm font-sans tracking-widest uppercase text-white/80 hover:text-[#d4af37] transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-[#d4af37] hover:after:w-full after:transition-all after:duration-300"
@@ -66,7 +68,7 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* VIP GOLD Button */}
+            {/* VIP GOLD Button Desktop */}
             <a
               href="https://wa.me/40768526104?text=Hello!%20I%20want%20to%20book%20a%20VIP%20table%20at%20LABIRINT%20Gentlemen's%20Club%20in%20Bucharest."
               target="_blank"
@@ -78,7 +80,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <button 
+          <button
             className="md:hidden text-[#d4af37]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -90,7 +92,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -98,8 +100,8 @@ export default function Navbar() {
           >
             <div className="flex flex-col items-center space-y-8 w-full">
               {navLinks.map((link) => (
-                <Link 
-                  key={link.label} 
+                <Link
+                  key={link.label}
                   href={link.href}
                   onClick={() => handleNavClick(link.href)}
                   className="text-xl font-serif tracking-widest text-white hover:text-[#d4af37] transition-colors"
@@ -107,6 +109,16 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+
+              {/* VIP GOLD Button Mobile */}
+              <a
+                href="https://wa.me/40768526104?text=Hello!%20I%20want%20to%20book%20a%20VIP%20table%20at%20LABIRINT%20Gentlemen's%20Club%20in%20Bucharest."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="vip-button"
+              >
+                Book VIP Table
+              </a>
             </div>
           </motion.div>
         )}
