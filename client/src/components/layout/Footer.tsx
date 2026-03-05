@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Contact Info with Map */}
           <div className="flex flex-col items-center md:items-start space-y-4">
             <h4 className="font-serif text-xl text-white tracking-widest mb-2">Contact</h4>
-            <a href="tel:40768526104" className="flex items-center space-x-3 text-white/70 hover:text-primary transition-colors text-sm">
+            <a href="tel:+40768526104" className="flex items-center space-x-3 text-white/70 hover:text-primary transition-colors text-sm">
               <Phone size={16} className="text-primary" />
               <span>+40768526104</span>
             </a>
