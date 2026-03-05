@@ -29,7 +29,7 @@ export default function Footer() {
             </a>
             <a href="mailto:vip@labirint.com" className="flex items-center space-x-3 text-white/70 hover:text-primary transition-colors text-sm">
               <Mail size={16} className="text-primary" />
-              <span>vip@labirint.com</span>
+              <span>club.labirint2026@gmail.com</span>
             </a>
             <div className="flex items-center space-x-3 text-white/70 text-sm">
               <MapPin size={16} className="text-primary" />
