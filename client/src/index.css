@@ -100,37 +100,3 @@
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
   }
 }
-.vip-button {
-  display: inline-block;
-  padding: 14px 32px;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: black;
-  background: linear-gradient(135deg, #d4af37, #f6e27a, #d4af37);
-  border-radius: 50px;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 15px rgba(212,175,55,0.6);
-  position: relative;
-}
-
-.vip-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 0 30px rgba(212,175,55,0.9);
-}
-
-.vip-button::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: 50px;
-  background: linear-gradient(90deg,#d4af37,#fff2a8,#d4af37);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.vip-button:hover::before {
-  opacity: 0.5;
-  filter: blur(6px);
-}
