@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 // Unsplash Image References
-const HERO_IMG = "https://images.unsplash.com/photo-1574347596001-c8fc47e2468d?q=80&w=2000&auto=format&fit=crop"; // dark luxury champagne
+const HERO_IMG = "images/IMG_5841.jpeg"; // dark luxury champagne
 const ABOUT_IMG = "https://images.unsplash.com/photo-1566847413645-1b250de485cc?q=80&w=800&auto=format&fit=crop"; // elegant dark lounge
 const GALLERY_IMGS = [
   "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop",
