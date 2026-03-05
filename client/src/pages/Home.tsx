@@ -5,7 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 // Unsplash Image References
 const HERO_IMG = "images/IMG_5841.jpeg"; // dark luxury champagne
-const ABOUT_IMG = "images/IMG_5729.jpeg"; // elegant dark lounge
+const ABOUT_IMG = "images/5B7B9FB3-7FBC-4338-B67A-AB2537A51C3A.png"; // elegant dark lounge
 const GALLERY_IMGS = [
   "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=600&auto=format&fit=crop",
