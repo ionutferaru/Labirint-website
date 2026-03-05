@@ -28,7 +28,7 @@ const fadeUp = {
 
 export default function Home() {
   useEffect(() => {
-    document.title = "LABIRINT Gentlemen's Club | Luxury Strip Club";
+    document.title = "Labirint Gentlemen's Club - Strip Club Bucharest | VIP Nightlife";
   }, []);
 
   return (
