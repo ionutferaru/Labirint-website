@@ -27,7 +27,7 @@ export default function Footer() {
               <Phone size={16} className="text-primary" />
               <span>+1 (234) 567-890</span>
             </a>
-            <a href="mailto:vip@labirint.com" className="flex items-center space-x-3 text-white/70 hover:text-primary transition-colors text-sm">
+            <a href="mailto:club.labirint2026@gmail.com" className="flex items-center space-x-3 text-white/70 hover:text-primary transition-colors text-sm">
               <Mail size={16} className="text-primary" />
               <span>club.labirint2026@gmail.com</span>
             </a>
