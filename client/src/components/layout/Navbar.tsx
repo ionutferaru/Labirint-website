@@ -103,16 +103,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* VIP GOLD Floating Button - înlocuiește complet WhatsApp */}
-      <a
-        href="https://wa.me/40768526104?text=Hello!%20I%20want%20to%20book%20a%20VIP%20table%20at%20LABIRINT%20Gentlemen's%20Club%20in%20Bucharest."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="vip-button"
-      >
-        Book VIP Table
-      </a>
     </>
   );
 }
