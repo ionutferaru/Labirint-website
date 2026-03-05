@@ -84,7 +84,7 @@ export default function Home() {
               target="_blank"
               className="inline-block px-10 py-4 bg-green-500 text-white font-sans tracking-widest uppercase text-sm hover:bg-green-600 transition-all duration-500 hover-glow"
             >
-              Contact via WhatsApp
+              Book VIP Table
             </a>
           </motion.div>
 
