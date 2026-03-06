@@ -4,12 +4,12 @@ export default function WhatsAppButton() {
       href="https://wa.me/40768526104?text=Salut!%20Vreau%20să%20rezerv%20o%20masă%20VIP%20la%20LABIRINT%20Gentlemen's%20Club."
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-6 right-6 z-50"
     >
       <div className="flex items-center gap-3 px-6 py-3 rounded-full 
       bg-gradient-to-r from-[#d4af37] to-[#f5e6a8]
       text-black font-semibold tracking-wide shadow-lg
-      transition-all duration-300
+      transition-transform duration-300
       hover:scale-105 hover:shadow-2xl">
 
         {/* WhatsApp icon */}
