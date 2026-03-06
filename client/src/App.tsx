@@ -5,6 +5,7 @@ import NotFound from "@/pages/not-found";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+// Buton VIP GOLD floating jos-dreapta
 function WhatsAppButton() {
   return (
     <a
