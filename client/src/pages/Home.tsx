@@ -175,17 +175,41 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16">
             
             {/* Location */}
-            <FadeIn>
-              <h2 className="text-4xl font-serif text-white mb-8">Find Us</h2>
-              <div className="w-12 h-[1px] bg-gold-gradient mb-8"></div>
-              <p className="text-white/70 mb-8 text-lg">
-                Located in the heart of [CITY].<br/>
-                <span className="text-white/40 italic">Address coming soon.</span>
-              </p>
-              <div className="w-full aspect-video bg-white/5 border border-white/10 flex items-center justify-center">
-                <p className="text-white/30 tracking-widest uppercase text-sm">Google Maps Placeholder</p>
-              </div>
-            </FadeIn>
+            {/* Find Us */}
+<FadeIn>
+  <h2 className="text-4xl font-serif text-white mb-8">Find Us</h2>
+  <div className="w-12 h-[1px] bg-gold-gradient mb-8"></div>
+
+  <p className="text-white/70 mb-8 text-lg">
+    Located in the heart of Bucharest.
+  </p>
+
+  <div className="relative w-full aspect-video border border-gold-light/20 overflow-hidden group">
+
+    <iframe
+      src="https://www.google.com/maps?q=Bucharest&output=embed"
+      className="absolute inset-0 w-full h-full grayscale contrast-125 brightness-75"
+      loading="lazy"
+    ></iframe>
+
+    {/* dark luxury overlay */}
+    <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+
+    {/* gold glow border */}
+    <div className="absolute inset-0 border border-gold-light/30 group-hover:border-gold-light transition-colors duration-500"></div>
+
+    {/* open maps button */}
+    <a
+      href="https://maps.google.com/?q=Bucharest"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="absolute bottom-4 right-4 px-4 py-2 text-xs tracking-widest uppercase bg-black/70 border border-gold-light/40 text-white hover:bg-gold-light hover:text-black transition-all duration-300"
+    >
+      Open in Maps
+    </a>
+
+  </div>
+</FadeIn>
 
             {/* Contact */}
             <FadeIn delay={0.2}>
@@ -198,11 +222,11 @@ export default function Home() {
               <div className="space-y-8">
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Phone</p>
-                  <a href="tel:++40768526104" className="text-2xl text-white hover:text-gold-light transition-colors">+40768526104</a>
+                  <a href="tel:+40768526104" className="text-2xl text-white hover:text-gold-light transition-colors">+40768526104</a>
                 </div>
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">WhatsApp</p>
-                  <a href="https://wa.me/40768526104" className="text-2xl text-white hover:text-gold-light transition-colors">+40768526104</a>
+                  <a href="https://wa.me/40768526104?text=Hello%20I%20want%20to%20make%20a%20reservation" className="text-2xl text-white hover:text-gold-light transition-colors">+40768526104</a>
                 </div>
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Instagram</p>
