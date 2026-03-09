@@ -109,7 +109,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         aria-label="Book Table on WhatsApp"
       >
         <MessageCircle size={20} />
-        <span>Book Table</span>
+        <span>Reserve Table</span>
       </a>
     </div>
   );
