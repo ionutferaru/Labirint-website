@@ -200,7 +200,7 @@ export default function Home() {
 
     {/* open maps button */}
     <a
-      href="https://maps.google.com/?q=Bucharest"
+      href="https://www.google.com/maps?q=Clopotarii+Vechi+3+Bucuresti"
       target="_blank"
       rel="noopener noreferrer"
       className="absolute bottom-4 right-4 px-4 py-2 text-xs tracking-widest uppercase bg-black/70 border border-gold-light/40 text-white hover:bg-gold-light hover:text-black transition-all duration-300"
