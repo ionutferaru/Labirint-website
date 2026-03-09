@@ -47,7 +47,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-6 tracking-wider drop-shadow-2xl"
           >
-            LABIRINT
+            ENTER LABIRINT
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -55,7 +55,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.8 }}
             className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-12 max-w-xl mx-auto"
           >
-            Luxury Gentlemen’s Club in [CITY]
+            Luxury Gentlemen’s Club in Bucharest
           </motion.p>
           
           <motion.div 
