@@ -198,11 +198,11 @@ export default function Home() {
               <div className="space-y-8">
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Phone</p>
-                  <a href="tel:+" className="text-2xl text-white hover:text-gold-light transition-colors">+40 768 526 104</a>
+                  <a href="tel:+" className="text-2xl text-white hover:text-gold-light transition-colors">+40768526104</a>
                 </div>
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">WhatsApp</p>
-                  <a href="#" className="text-2xl text-white hover:text-gold-light transition-colors">+40 768 526 104</a>
+                  <a href="#" className="text-2xl text-white hover:text-gold-light transition-colors">+40768526104</a>
                 </div>
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Instagram</p>
