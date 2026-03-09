@@ -206,7 +206,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Instagram</p>
-                  <a href="#" className="text-2xl text-white hover:text-gold-light transition-colors">@club_lab1rint</a>
+                  <a href="https://www.instagram.com/club.lab1rint?igsh=MWZsNmV3eGxybTZveQ%3D%3D&utm_source=qr" className="text-2xl text-white hover:text-gold-light transition-colors">@club_lab1rint</a>
                 </div>
               </div>
             </FadeIn>
