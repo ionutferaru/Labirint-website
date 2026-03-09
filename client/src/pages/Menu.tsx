@@ -19,8 +19,9 @@ const MenuSection = ({ title, items, delay }: { title: string; items: any[]; del
         {items.map((item, i) => (
           <div key={i} className="group p-6 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-gold-light/30 transition-all duration-300">
             <div className="flex justify-between items-baseline mb-2">
+              {/* Nume și preț în același font */}
               <h3 className="text-xl font-serif text-white group-hover:text-gold-light transition-colors">{item.name}</h3>
-              <span className="text-white/30 text-sm tracking-widest">{item.price}</span>
+              <span className="text-xl font-serif text-white group-hover:text-gold-light transition-colors">{item.price}</span>
             </div>
             {item.desc && (
               <p className="text-white/50 text-sm font-light leading-relaxed">{item.desc}</p>
