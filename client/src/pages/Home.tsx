@@ -1,253 +1,219 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import SectionHeading from "@/components/ui/SectionHeading";
+import heroImg from "@/assets/images/hero.png";
+import gallery1 from "@/assets/images/gallery-1.png";
+import gallery2 from "@/assets/images/gallery-2.png";
+import gallery3 from "@/assets/images/gallery-3.png";
+import gallery4 from "@/assets/images/gallery-4.png";
 
-// Images
-const HERO_IMG = "images/IMG_5841.jpeg";
-const ABOUT_IMG = "images/5B7B9FB3-7FBC-4338-B67A-AB2537A51C3A.png";
-
-const GALLERY_IMGS = [
-  "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1595919318182-14a51e604f2f?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1555597408-26bc8e548a46?q=80&w=600&auto=format&fit=crop",
-];
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
-};
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-};
+const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.8, delay, ease: "easeOut" }}
+  >
+    {children}
+  </motion.div>
+);
 
 export default function Home() {
-
-  useEffect(() => {
-    document.title =
-      "Labirint Gentlemen's Club - Strip Club Bucharest | VIP Nightlife";
-  }, []);
-
   return (
     <div className="w-full">
-
-      {/* HERO */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-
+      {/* HERO SECTION */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/60 z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80 z-20" />
-
-          <motion.img
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 10, ease: "easeOut" }}
-            src={HERO_IMG}
-            alt="Luxury Strip Club Bucharest VIP Nightlife"
-            className="w-full h-full object-cover"
+          <img 
+            src={heroImg} 
+            alt="LABIRINT Club Interior" 
+            className="w-full h-full object-cover opacity-60 scale-105 transform hover:scale-100 transition-transform duration-[10s] ease-out"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent"></div>
         </div>
 
-        <div className="relative z-30 text-center px-4 max-w-4xl mx-auto mt-20">
-
-          <motion.h1
+        <div className="relative z-10 text-center px-6 mt-20">
+          <motion.p 
+            initial={{ opacity: 0, tracking: "0em" }}
+            animate={{ opacity: 1, tracking: "0.2em" }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            className="text-gold-light text-sm md:text-base uppercase mb-4"
+          >
+            Premium Nightlife Experience
+          </motion.p>
+          <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white tracking-widest mb-6 drop-shadow-2xl"
+            className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-6 tracking-wider drop-shadow-2xl"
           >
-            ENTER THE <span className="text-gold-gradient">LABIRINT</span>
+            LABIRINT
           </motion.h1>
-
-          <motion.p
+          <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="text-white/80 font-sans tracking-[0.2em] uppercase text-sm md:text-base mb-12 max-w-2xl mx-auto leading-relaxed"
+            transition={{ duration: 1, delay: 0.8 }}
+            className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-12 max-w-xl mx-auto"
           >
-            The epitome of luxury, discretion, and unmatched entertainment.
+            Luxury Gentlemen’s Club in [CITY]
           </motion.p>
-
-          <motion.div
+          
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.5 }}
+            transition={{ duration: 1, delay: 1.1 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <a
-              href="https://wa.me/40768526104?text=Hello!%20I%20would%20like%20to%20book%20a%20VIP%20table%20at%20LABIRINT%20Gentlemen's%20Club%20in%20Bucharest%20tonight.%20We%20are%20__%20people.%20Do%20you%20have%20availability?"
-              target="_blank"
-              className="inline-block px-10 py-4 bg-green-500 text-white font-sans tracking-widest uppercase text-sm hover:bg-green-600 transition-all duration-500 hover-glow"
+            <a 
+              href="#contact" 
+              className="px-8 py-4 bg-gold-gradient text-black font-semibold tracking-widest uppercase text-sm hover:scale-105 transition-transform duration-300"
             >
-              Book VIP Table
+              Reserve Now
             </a>
+            <Link href="/menu">
+              <a className="px-8 py-4 border border-white/30 text-white font-semibold tracking-widest uppercase text-sm hover:bg-white/10 transition-colors duration-300">
+                View Menu
+              </a>
+            </Link>
           </motion.div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        >
+          <div className="w-[1px] h-16 bg-gradient-to-b from-gold-light to-transparent opacity-50"></div>
+        </motion.div>
+      </section>
 
+      {/* ABOUT SECTION */}
+      <section id="about" className="py-32 px-6 bg-black relative">
+        <div className="container mx-auto max-w-4xl text-center">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-serif text-gold-gradient mb-8">About LABIRINT</h2>
+            <div className="w-12 h-[1px] bg-gold-gradient mx-auto mb-10"></div>
+            <p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light">
+              “LABIRINT is an exclusive gentlemen’s club offering a premium nightlife experience in [CITY]. 
+              Enjoy signature drinks, elegant atmosphere and unforgettable nights.”
+            </p>
+            <p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
+              18+ Only
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="py-32 bg-black relative">
-
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent z-0" />
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUp}
-            >
-              <img
-                src={ABOUT_IMG}
-                alt="Elegant Strip Club Lounge Bucharest"
-                className="w-full h-auto aspect-[4/5] object-cover border border-white/10 shadow-2xl"
-              />
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
-
-              <SectionHeading
-                title="Unrivaled Elegance"
-                subtitle="The Experience"
-                centered={false}
-              />
-
-              <motion.div
-                variants={fadeUp}
-                className="space-y-6 text-white/70 font-sans leading-loose text-sm md:text-base"
-              >
-
-                <p>
-                  LABIRINT is a luxury strip club in Bucharest offering VIP nightlife,
-                  private bachelor parties and exclusive gentlemen's club entertainment.
-                  Located in the heart of Bucharest, our venue delivers a premium adult
-                  nightlife experience for international guests and local elites.
+      {/* PRIVATE EVENTS SECTION */}
+      <section id="events" className="py-32 px-6 relative bg-[#0a0a0a] border-y border-white/5">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold-900/5 via-black to-black pointer-events-none"></div>
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <FadeIn>
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-serif text-white mb-8">Private Events & Bachelor Parties</h2>
+                <ul className="space-y-6 mb-10">
+                  {['Bachelor Parties', 'Private Events', 'Birthday Celebrations', 'VIP Group Nights'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-4 text-white/70 text-lg">
+                      <span className="w-2 h-2 rounded-full bg-gold-light"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-white/60 italic text-lg mb-10">
+                  "Full venue rental available. Custom packages on request."
                 </p>
-
-                <p>
-                  Enjoy elegant private lounges, beautiful performers, premium champagne
-                  service and unforgettable nights. LABIRINT is one of the most exclusive
-                  gentlemen's clubs in Bucharest, designed for those seeking discretion,
-                  luxury atmosphere and world-class entertainment.
-                </p>
-
-                <Link
-                  href="/menu"
-                  className="inline-block mt-8 text-primary border-b border-primary pb-1 tracking-widest uppercase text-xs hover:text-white hover:border-white transition-colors duration-300"
-                >
-                  Explore Our Menu
-                </Link>
-
-              </motion.div>
-            </motion.div>
-
-          </div>
+                <a href="#contact" className="inline-block px-8 py-4 border-gold-gradient text-white hover-bg-gold-gradient transition-all duration-300 tracking-widest uppercase text-sm">
+                  Inquire Now
+                </a>
+              </div>
+              <div className="relative aspect-square md:aspect-[4/5]">
+                <img src={gallery2} alt="VIP Lounge" className="w-full h-full object-cover opacity-80" />
+                <div className="absolute inset-0 border border-gold-light/20 scale-[0.95]"></div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* EVENTS */}
-      <section id="events" className="py-32 bg-[#050505]">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <SectionHeading title="Private Events" subtitle="Exclusive" />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-
-            {[
-              {
-                title: "Corporate",
-                desc: "Sophisticated settings for discerning professionals and client entertainment."
-              },
-              {
-                title: "Bachelor Parties",
-                desc: "Unforgettable celebrations tailored to your exact specifications."
-              },
-              {
-                title: "Private Suites",
-                desc: "Ultimate discretion in our secluded VIP lounges."
-              }
-            ].map((event, i) => (
-
-              <motion.div
-                key={event.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                className="group p-10 bg-black border border-white/5 hover:border-primary/50 transition-all duration-500"
-              >
-
-                <div className="h-12 w-12 rounded-full border border-primary/30 flex items-center justify-center mb-6">
-                  <span className="text-primary text-xl font-serif">{i + 1}</span>
+      {/* GALLERY SECTION */}
+      <section id="gallery" className="py-32 px-6 bg-black">
+        <div className="container mx-auto max-w-7xl">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-serif text-center text-white mb-16">The Experience</h2>
+          </FadeIn>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[gallery1, gallery2, gallery3, gallery4].map((img, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className="group relative aspect-square overflow-hidden cursor-pointer">
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500 z-10"></div>
+                  <img 
+                    src={img} 
+                    alt={`Gallery ${i+1}`} 
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                  />
                 </div>
-
-                <h3 className="font-serif text-2xl text-white mb-4">
-                  {event.title}
-                </h3>
-
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {event.desc}
-                </p>
-
-              </motion.div>
-
+              </FadeIn>
             ))}
-
+            
+            {/* Additional placeholder spots to complete the grid */}
+            <FadeIn delay={0.4}>
+              <div className="group relative aspect-square overflow-hidden bg-white/5 flex items-center justify-center">
+                 <p className="text-white/30 font-serif tracking-widest uppercase">More Coming Soon</p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section id="gallery" className="py-32 bg-black">
+      {/* LOCATION & CONTACT SECTION */}
+      <section id="contact" className="py-32 px-6 bg-gradient-to-b from-black to-[#050505]">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-16">
+            
+            {/* Location */}
+            <FadeIn>
+              <h2 className="text-4xl font-serif text-white mb-8">Find Us</h2>
+              <div className="w-12 h-[1px] bg-gold-gradient mb-8"></div>
+              <p className="text-white/70 mb-8 text-lg">
+                Located in the heart of [CITY].<br/>
+                <span className="text-white/40 italic">Address coming soon.</span>
+              </p>
+              <div className="w-full aspect-video bg-white/5 border border-white/10 flex items-center justify-center">
+                <p className="text-white/30 tracking-widest uppercase text-sm">Google Maps Placeholder</p>
+              </div>
+            </FadeIn>
 
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
-
-          <SectionHeading title="The Atmosphere" subtitle="Gallery" />
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-
-            {GALLERY_IMGS.map((src, i) => (
-
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`relative group overflow-hidden ${i === 0 || i === 3 ? "md:col-span-2 md:row-span-2" : ""}`}
-              >
-
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10" />
-
-                <img
-                  src={src}
-                  alt="Strip Club Gallery Bucharest"
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                />
-
-              </motion.div>
-
-            ))}
-
+            {/* Contact */}
+            <FadeIn delay={0.2}>
+              <h2 className="text-4xl font-serif text-white mb-8">Reservations</h2>
+              <div className="w-12 h-[1px] bg-gold-gradient mb-8"></div>
+              <p className="text-white/70 mb-12 text-lg">
+                For reservations and private bookings contact us:
+              </p>
+              
+              <div className="space-y-8">
+                <div>
+                  <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Phone</p>
+                  <a href="tel:+" className="text-2xl text-white hover:text-gold-light transition-colors">+1 (555) 123-4567</a>
+                </div>
+                <div>
+                  <p className="text-white/40 text-sm tracking-widest uppercase mb-2">WhatsApp</p>
+                  <a href="#" className="text-2xl text-white hover:text-gold-light transition-colors">+1 (555) 123-4567</a>
+                </div>
+                <div>
+                  <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Instagram</p>
+                  <a href="#" className="text-2xl text-white hover:text-gold-light transition-colors">@labirint_club</a>
+                </div>
+              </div>
+            </FadeIn>
+            
           </div>
         </div>
       </section>
-
     </div>
   );
 }
