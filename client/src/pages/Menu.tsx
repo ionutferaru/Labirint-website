@@ -20,7 +20,7 @@ const MenuSection = ({ title, items, delay }: { title: string; items: any[]; del
           <div key={i} className="group p-6 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-gold-light/30 transition-all duration-300">
             <div className="flex justify-between items-baseline mb-2">
               <h3 className="text-xl font-serif text-white group-hover:text-gold-light transition-colors">{item.name}</h3>
-              <span className="text-white/30 text-sm tracking-widest">ASK</span>
+              <span className="text-white/30 text-sm tracking-widest">{item.price}</span>
             </div>
             {item.desc && (
               <p className="text-white/50 text-sm font-light leading-relaxed">{item.desc}</p>
@@ -35,46 +35,123 @@ const MenuSection = ({ title, items, delay }: { title: string; items: any[]; del
 export default function Menu() {
   const menuData = [
     {
-      title: "Premium Drinks",
+      title: "WHISKY (50ml)",
       items: [
-        { name: "Johnnie Walker Blue Label", desc: "Premium blended scotch whisky." },
-        { name: "Macallan 18 Years", desc: "Single malt scotch whisky." },
-        { name: "Hennessy X.O", desc: "Extra old cognac." },
-        { name: "Don Julio 1942", desc: "Premium tequila añejo." },
+        { name: "Jack Daniel’s", price: "35 lei" },
+        { name: "Jameson", price: "30 lei" },
+        { name: "Chivas Regal 12", price: "40 lei" },
+        { name: "Johnnie Walker Black Label", price: "40 lei" },
       ]
     },
     {
-      title: "Champagne",
+      title: "WHISKY - STICLA (700ml)",
       items: [
-        { name: "Dom Pérignon", desc: "Vintage champagne." },
-        { name: "Louis Roederer Cristal", desc: "Exceptional vintage champagne." },
-        { name: "Armand de Brignac", desc: "Prestige cuvée champagne." },
-        { name: "Moët & Chandon Rosé", desc: "Imperial rosé champagne." },
+        { name: "Jack Daniel’s", price: "400 lei" },
+        { name: "Jameson", price: "350 lei" },
+        { name: "Chivas Regal 12", price: "500 lei" },
+        { name: "Black Label", price: "500 lei" },
       ]
     },
     {
-      title: "Signature Cocktails",
+      title: "VODKA (50ml)",
       items: [
-        { name: "The Labirint", desc: "Premium vodka, blackberry liqueur, gold flakes." },
-        { name: "Midnight Kiss", desc: "Gin, elderflower, fresh lime, prosecco top." },
-        { name: "Velvet Old Fashioned", desc: "Bourbon, dark cherry syrup, angostura bitters." },
-        { name: "Gold Rush", desc: "Tequila, honey syrup, fresh lemon juice." },
+        { name: "Absolut", price: "35 lei" },
+        { name: "Finlandia", price: "35 lei" },
+        { name: "Grey Goose", price: "45 lei" },
+        { name: "Belvedere", price: "50 lei" },
       ]
     },
     {
-      title: "Soft Drinks",
+      title: "VODKA - STICLA (700ml)",
       items: [
-        { name: "Premium Still Water", desc: "Voss or Acqua Panna." },
-        { name: "Sparkling Water", desc: "San Pellegrino." },
-        { name: "Craft Sodas", desc: "Assorted flavors." },
-        { name: "Energy Drinks", desc: "Red Bull, Sugar-Free." },
+        { name: "Absolut", price: "350 lei" },
+        { name: "Finlandia", price: "350 lei" },
+        { name: "Grey Goose", price: "550 lei" },
+        { name: "Belvedere", price: "600 lei" },
+      ]
+    },
+    {
+      title: "TEQUILA (50ml)",
+      items: [
+        { name: "Camino", price: "30 lei" },
+        { name: "Patron", price: "35 lei" },
+      ]
+    },
+    {
+      title: "VIN - STICLA",
+      items: [
+        { name: "Castel Huniade", price: "160 lei" },
+        { name: "Caii de la Letea", price: "180 lei" },
+        { name: "Purcari 1827", price: "200 lei" },
+        { name: "Recas Muse", price: "250 lei" },
+      ]
+    },
+    {
+      title: "LADIES DRINKS",
+      items: [
+        { name: "Asti Martini", price: "600 lei" },
+        { name: "Angelli Cuvee Imperial", price: "500 lei" },
+        { name: "Moet", price: "1300 lei" },
+        { name: "Ladies Cocktail", price: "100 lei" },
+        { name: "Pahar Sampanie + fi-GA", price: "150 lei" },
+      ]
+    },
+    {
+      title: "SHOTS",
+      items: [
+        { name: "B52", price: "30 lei" },
+        { name: "Baby Guinness", price: "30 lei" },
+        { name: "Kamikaze", price: "30 lei" },
+        { name: "Goodfather", price: "30 lei" },
+        { name: "Blowjob Shot", price: "30 lei" },
+      ]
+    },
+    {
+      title: "LONG DRINKS",
+      items: [
+        { name: "Vodka + Cola", price: "45 lei" },
+        { name: "Vodka + Sprite", price: "45 lei" },
+        { name: "Vodka + Red Bull", price: "45 lei" },
+        { name: "Vodka + Tonic", price: "45 lei" },
+        { name: "Whisky + Cola", price: "45 lei" },
+        { name: "Whisky + Red Bull", price: "45 lei" },
+        { name: "Gin + Tonic", price: "45 lei" },
+        { name: "Gin + Tonic + Lime", price: "45 lei" },
+        { name: "Gin + Tonic + Portocala", price: "45 lei" },
+        { name: "Gin + Sprite + Lime", price: "45 lei" },
+        { name: "Cuba Libre", price: "45 lei" },
+      ]
+    },
+    {
+      title: "BERE",
+      items: [
+        { name: "Heineken", price: "25 lei" },
+        { name: "Ursus", price: "20 lei" },
+        { name: "Corona", price: "30 lei" },
+      ]
+    },
+    {
+      title: "SOFT DRINKS",
+      items: [
+        { name: "Cola", price: "20 lei" },
+        { name: "Pepsi", price: "20 lei" },
+        { name: "Sprite", price: "20 lei" },
+        { name: "Santal (1L)", price: "35 lei" },
+        { name: "Apa Plata 0.5L", price: "15 lei" },
+        { name: "Apa Minerala 1L", price: "25 lei" },
+      ]
+    },
+    {
+      title: "ENERGIZANT",
+      items: [
+        { name: "Red Bull", price: "25 lei" },
+        { name: "fi-GA", price: "35 lei" },
       ]
     }
   ];
 
   return (
     <div className="w-full pt-32 pb-20 px-6 min-h-screen relative">
-      {/* Background Effect */}
       <div className="fixed inset-0 pointer-events-none z-[-1] bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-gold-900/10 via-black to-black"></div>
       
       <div className="container mx-auto">
