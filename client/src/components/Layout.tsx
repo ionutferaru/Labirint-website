@@ -90,9 +90,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <h2 className="font-serif text-3xl tracking-widest text-white/90">LABIRINT</h2>
           <p className="text-white/50 text-sm tracking-widest uppercase">Premium Nightlife Experience</p>
           <div className="flex gap-6 mt-4">
-            <a href="#" className="text-white/50 hover:text-gold-light transition-colors">Instagram</a>
-            <a href="#" className="text-white/50 hover:text-gold-light transition-colors">WhatsApp</a>
-            <a href="#" className="text-white/50 hover:text-gold-light transition-colors">Contact</a>
+            <a href="https://www.instagram.com/club.lab1rint?igsh=MWZsNmV3eGxybTZveQ%3D%3D&utm_source=qr" className="text-white/50 hover:text-gold-light transition-colors">Instagram</a>
+            <a href="https://wa.me/40768526104?text=Hello%20I%20want%20to%20make%20a%20reservation" className="text-white/50 hover:text-gold-light transition-colors">WhatsApp</a>
+            <a href="tel:+40768526104" className="text-white/50 hover:text-gold-light transition-colors">Contact</a>
           </div>
           <p className="text-white/30 text-xs mt-12 tracking-widest">
             © 2026 LABIRINT Gentlemen’s Club – 18+ Only
