@@ -33,7 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/">
             <a className="font-serif text-2xl tracking-widest text-white hover:text-gold-light transition-colors">
-              LABIRINT
+              LABIRINT TEST
             </a>
           </Link>
 
