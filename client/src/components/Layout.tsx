@@ -16,7 +16,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     window.scrollTo(0, 0);
@@ -24,40 +23,60 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col font-sans selection:bg-gold/30 selection:text-gold-light">
+
       {/* Navigation */}
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-black/90 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6"
+          isScrolled
+            ? "bg-black/90 backdrop-blur-md border-b border-white/5 py-4"
+            : "bg-transparent py-6"
         }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
+
           <Link href="/">
-  <a className="flex flex-col items-start leading-tight">
+            <a className="flex flex-col items-start leading-tight">
 
-    <span className="font-serif text-2xl tracking-[0.25em] bg-gradient-to-r from-[#d4af37] via-[#f5e6a8] to-[#d4af37] bg-clip-text text-transparent">
-      LABIRINT
-    </span>
+              <span className="font-serif text-2xl tracking-[0.25em] bg-gradient-to-r from-[#d4af37] via-[#f5e6a8] to-[#d4af37] bg-clip-text text-transparent">
+                LABIRINT
+              </span>
 
-    <span className="flex items-center gap-2 text-[10px] tracking-[0.4em] text-white/60 uppercase mt-1">
+              <span className="flex items-center gap-2 text-[10px] tracking-[0.4em] text-white/60 uppercase mt-1">
 
-      <span className="w-6 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]"></span>
+                <span className="w-6 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]"></span>
 
-      Gentlemen’s Club
+                Gentlemen’s Club
 
-      <span className="w-6 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]"></span>
+                <span className="w-6 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]"></span>
 
-    </span>
+              </span>
 
-  </a>
-</Link>
+            </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-8 items-center text-sm tracking-wider uppercase text-white/80">
             <Link href="/"><a className="hover:text-gold-light transition-colors">Home</a></Link>
+
+            {/* ADDED ABOUT */}
+            <a href="/#about" className="hover:text-gold-light transition-colors">
+              About
+            </a>
+
             <Link href="/menu"><a className="hover:text-gold-light transition-colors">Menu</a></Link>
-            <a href="/#events" className="hover:text-gold-light transition-colors">Private Events</a>
-            <a href="/#gallery" className="hover:text-gold-light transition-colors">Gallery</a>
-            <a href="/#contact" className="px-5 py-2 border-gold-gradient text-white hover-bg-gold-gradient transition-all duration-300">
+
+            <a href="/#events" className="hover:text-gold-light transition-colors">
+              Private Events
+            </a>
+
+            <a href="/#gallery" className="hover:text-gold-light transition-colors">
+              Gallery
+            </a>
+
+            <a
+              href="/#contact"
+              className="px-5 py-2 border-gold-gradient text-white hover-bg-gold-gradient transition-all duration-300"
+            >
               Reservations
             </a>
           </nav>
@@ -69,6 +88,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
+
         </div>
       </header>
 
@@ -82,35 +102,92 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             className="fixed inset-0 z-40 bg-black pt-24 px-6 md:hidden"
           >
             <nav className="flex flex-col gap-8 text-xl font-serif text-center">
+
               <Link href="/"><a className="text-white hover:text-gold-light">Home</a></Link>
+
+              {/* ADDED ABOUT */}
+              <a
+                href="/#about"
+                className="text-white hover:text-gold-light"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </a>
+
               <Link href="/menu"><a className="text-white hover:text-gold-light">Menu</a></Link>
-              <a href="/#events" className="text-white hover:text-gold-light" onClick={() => setIsMobileMenuOpen(false)}>Private Events</a>
-              <a href="/#gallery" className="text-white hover:text-gold-light" onClick={() => setIsMobileMenuOpen(false)}>Gallery</a>
-              <a href="/#contact" className="text-gold-light mt-4" onClick={() => setIsMobileMenuOpen(false)}>Reservations</a>
+
+              <a
+                href="/#events"
+                className="text-white hover:text-gold-light"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Private Events
+              </a>
+
+              <a
+                href="/#gallery"
+                className="text-white hover:text-gold-light"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Gallery
+              </a>
+
+              <a
+                href="/#contact"
+                className="text-gold-light mt-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Reservations
+              </a>
+
             </nav>
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* Main Content */}
-      <main className="flex-grow">
-        {children}
-      </main>
+      <main className="flex-grow">{children}</main>
 
       {/* Footer */}
       <footer className="bg-black pt-20 pb-10 border-t border-white/5 relative">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gold-gradient"></div>
         <div className="container mx-auto px-6 flex flex-col items-center gap-6">
-          <h2 className="font-serif text-3xl tracking-widest text-white/90">LABIRINT</h2>
-          <p className="text-white/50 text-sm tracking-widest uppercase">Premium Nightlife Experience</p>
+
+          <h2 className="font-serif text-3xl tracking-widest text-white/90">
+            LABIRINT
+          </h2>
+
+          <p className="text-white/50 text-sm tracking-widest uppercase">
+            Premium Nightlife Experience
+          </p>
+
           <div className="flex gap-6 mt-4">
-            <a href="https://www.instagram.com/club.lab1rint" className="text-white/50 hover:text-gold-light transition-colors">Instagram</a>
-            <a href="https://wa.me/40768526104?text=Hello%20I%20would%20like%20to%20reserve%20a%20table%20at%20LABIRINT%20Gentlemen's%20Club%20for%20__%20people%20tonight." className="text-white/50 hover:text-gold-light transition-colors">WhatsApp</a>
-            <a href="tel:+40768526104" className="text-white/50 hover:text-gold-light transition-colors">Contact</a>
+            <a
+              href="https://www.instagram.com/club.lab1rint"
+              className="text-white/50 hover:text-gold-light transition-colors"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://wa.me/40768526104?text=Hello%20I%20would%20like%20to%20reserve%20a%20table%20at%20LABIRINT%20Gentlemen's%20Club%20for%20__%20people%20tonight."
+              className="text-white/50 hover:text-gold-light transition-colors"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              href="tel:+40768526104"
+              className="text-white/50 hover:text-gold-light transition-colors"
+            >
+              Contact
+            </a>
           </div>
+
           <p className="text-white/30 text-xs mt-12 tracking-widest">
             © 2026 LABIRINT Gentlemen’s Club – 18+ Only
           </p>
+
         </div>
       </footer>
 
@@ -125,6 +202,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <MessageCircle size={20} />
         <span>Reserve Table</span>
       </a>
+
     </div>
   );
 }
