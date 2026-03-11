@@ -48,6 +48,9 @@ export default function Home() {
             className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-6 tracking-wider drop-shadow-2xl"
           >
             ENTER LABIRINT
+
+Luxury Gentlemen’s Club in Bucharest  
+VIP Nightlife • Private Events • Bachelor Parties
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
