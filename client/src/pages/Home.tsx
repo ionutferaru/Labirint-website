@@ -33,39 +33,41 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center px-6 mt-20">
-          <motion.p 
-            initial={{ opacity: 0, tracking: "0em" }}
-            animate={{ opacity: 1, tracking: "0.2em" }}
-            transition={{ duration: 1.2, delay: 0.2 }}
-            className="text-gold-light text-sm md:text-base uppercase mb-4"
-          >
-            Premium Nightlife Experience
-          </motion.p>
-          <motion.h1
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 0.5 }}
-  className="text-5xl md:text-7xl lg:text-8xl font-[Cinzel] text-white mb-6 tracking-wider drop-shadow-2xl"
+
+<motion.p 
+initial={{ opacity: 0, tracking: "0em" }}
+animate={{ opacity: 1, tracking: "0.2em" }}
+transition={{ duration: 1.2, delay: 0.2 }}
+className="text-gold-light text-sm md:text-base uppercase mb-4"
 >
-  ENTER LABIRINT
+Premium Nightlife Experience
+</motion.p>
+
+<motion.h1
+initial={{ opacity: 0, y: 20 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1, delay: 0.5 }}
+className="text-5xl md:text-7xl lg:text-8xl font-[Cinzel] text-white mb-6 tracking-wider drop-shadow-2xl"
+>
+ENTER LABIRINT
 </motion.h1>
 
 <motion.p
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1, delay: 0.8 }}
-  className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-4"
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+transition={{ duration: 1, delay: 0.8 }}
+className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-4"
 >
-  Luxury Gentlemen's Club in Bucharest
+Luxury Gentlemen's Club in Bucharest
 </motion.p>
 
 <motion.p
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1, delay: 1 }}
-  className="text-sm md:text-base text-gold-light tracking-[0.25em] uppercase"
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+transition={{ duration: 1, delay: 1 }}
+className="text-sm md:text-base text-gold-light tracking-[0.25em] uppercase mb-12"
 >
-  VIP Nightlife • Private Events • Bachelor Parties
+VIP Nightlife • Private Events • Bachelor Parties
 </motion.p> 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
