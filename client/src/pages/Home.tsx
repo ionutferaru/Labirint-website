@@ -21,13 +21,13 @@ export default function Home() {
   return (
     <div className="w-full">
 
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImg} 
-            alt="LABIRINT Club Interior" 
+          <img
+            src={heroImg}
+            alt="LABIRINT Club Interior"
             className="w-full h-full object-cover opacity-60 scale-105 transform hover:scale-100 transition-transform duration-[10s] ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
@@ -36,7 +36,7 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-6 mt-20">
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, tracking: "0em" }}
             animate={{ opacity: 1, tracking: "0.2em" }}
             transition={{ duration: 1.2, delay: 0.2 }}
@@ -72,14 +72,14 @@ export default function Home() {
             VIP Nightlife • Private Events • Bachelor Parties
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.1 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="px-8 py-4 bg-gold-gradient text-black font-semibold tracking-widest uppercase text-sm hover:scale-105 transition-transform duration-300"
             >
               Reserve Now
@@ -90,24 +90,13 @@ export default function Home() {
                 View Menu
               </a>
             </Link>
-
           </motion.div>
 
         </div>
 
-        {/* Scroll Indicator */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <div className="w-[1px] h-16 bg-gradient-to-b from-gold-light to-transparent opacity-50"></div>
-        </motion.div>
-
       </section>
 
-      {/* ABOUT SECTION */}
+      {/* ABOUT */}
       <section id="about" className="py-32 px-6 bg-black relative">
         <div className="container mx-auto max-w-4xl text-center">
           <FadeIn>
@@ -118,7 +107,7 @@ export default function Home() {
             <div className="w-12 h-[1px] bg-gold-gradient mx-auto mb-10"></div>
 
             <p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light">
-              LABIRINT is an exclusive gentlemen’s club offering a premium nightlife experience in Bucharest. 
+              LABIRINT is an exclusive gentlemen’s club offering a premium nightlife experience in Bucharest.
               Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettable nights in one of the most exclusive VIP nightlife destinations in the city.
             </p>
 
@@ -130,41 +119,49 @@ export default function Home() {
       </section>
 
       {/* PRIVATE EVENTS */}
-      <section id="events" className="py-32 px-6 relative bg-[#0a0a0a] border-y border-white/5">
-        <div className="container mx-auto max-w-5xl relative z-10">
+      <section id="events" className="py-32 px-6 bg-[#0a0a0a]">
+        <div className="container mx-auto max-w-5xl">
           <FadeIn>
-            <div className="grid md:grid-cols-2 gap-16 items-center">
 
-              <div>
-                <h2 className="text-4xl md:text-5xl font-serif text-white mb-8">
-                  Private Events & Bachelor Parties
-                </h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-white mb-8">
+              Private Events & Bachelor Parties
+            </h2>
 
-                <ul className="space-y-6 mb-10">
-                  {['Bachelor Parties','Private Events','Birthday Celebrations','VIP Group Nights'].map((item,i)=>(
-                    <li key={i} className="flex items-center gap-4 text-white/70 text-lg">
-                      <span className="w-2 h-2 rounded-full bg-gold-light"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            <ul className="space-y-6 text-white/70 text-lg">
+              <li>• Bachelor Parties</li>
+              <li>• Private Events</li>
+              <li>• Birthday Celebrations</li>
+              <li>• VIP Group Nights</li>
+            </ul>
 
-                <p className="text-white/60 italic text-lg mb-10">
-                  "Full venue rental available. Custom packages on request."
-                </p>
-
-                <a href="#contact" className="inline-block px-8 py-4 border-gold-gradient text-white tracking-widest uppercase text-sm">
-                  Inquire Now
-                </a>
-              </div>
-
-              <div className="relative aspect-square md:aspect-[4/5]">
-                <img src={gallery2} alt="VIP Lounge" className="w-full h-full object-cover opacity-80" />
-                <div className="absolute inset-0 border border-gold-light/20 scale-[0.95]"></div>
-              </div>
-
-            </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section id="gallery" className="py-32 px-6 bg-black">
+        <div className="container mx-auto max-w-7xl">
+
+          <h2 className="text-4xl md:text-5xl font-serif text-center text-white mb-16">
+            The Experience
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            {[gallery1, gallery2, gallery3, gallery4].map((img, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className="group relative aspect-square overflow-hidden cursor-pointer">
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500 z-10"></div>
+                  <img
+                    src={img}
+                    alt={`Gallery ${i + 1}`}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                  />
+                </div>
+              </FadeIn>
+            ))}
+
+          </div>
         </div>
       </section>
 
