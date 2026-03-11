@@ -33,13 +33,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/">
   <a className="flex flex-col items-start leading-tight">
-    
-    <span className="font-serif text-2xl tracking-[0.25em] text-white hover:text-gold-light transition-colors">
+
+    <span className="font-serif text-2xl tracking-[0.25em] bg-gradient-to-r from-[#d4af37] via-[#f5e6a8] to-[#d4af37] bg-clip-text text-transparent">
       LABIRINT
     </span>
 
-    <span className="text-[10px] tracking-[0.4em] text-white/50 uppercase font-light">
+    <span className="flex items-center gap-2 text-[10px] tracking-[0.4em] text-white/60 uppercase mt-1">
+
+      <span className="w-6 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]"></span>
+
       Gentlemen’s Club
+
+      <span className="w-6 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]"></span>
+
     </span>
 
   </a>
