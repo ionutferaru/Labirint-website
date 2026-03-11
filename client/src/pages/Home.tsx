@@ -41,18 +41,32 @@ export default function Home() {
           >
             Premium Nightlife Experience
           </motion.p>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-6 tracking-wider drop-shadow-2xl"
-          >
-            ENTER LABIRINT
+          <motion.h1
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 0.5 }}
+  className="text-5xl md:text-7xl lg:text-8xl font-[Cinzel] text-white mb-6 tracking-wider drop-shadow-2xl"
+>
+  ENTER LABIRINT
+</motion.h1>
 
-Luxury Gentlemen’s Club in Bucharest  
-VIP Nightlife • Private Events • Bachelor Parties
-          </motion.h1>
-          <motion.p 
+<motion.p
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1, delay: 0.8 }}
+  className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-4"
+>
+  Luxury Gentlemen's Club in Bucharest
+</motion.p>
+
+<motion.p
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1, delay: 1 }}
+  className="text-sm md:text-base text-gold-light tracking-[0.25em] uppercase"
+>
+  VIP Nightlife • Private Events • Bachelor Parties
+</motion.p> 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
