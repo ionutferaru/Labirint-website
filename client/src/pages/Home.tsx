@@ -23,9 +23,9 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImg} 
-            alt="LABIRINT Club Interior" 
+          <img
+            src={heroImg}
+            alt="LABIRINT Club Interior"
             className="w-full h-full object-cover opacity-60 scale-105 transform hover:scale-100 transition-transform duration-[10s] ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
@@ -33,49 +33,50 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center px-6 mt-20">
+          <motion.p
+            initial={{ opacity: 0, tracking: "0em" }}
+            animate={{ opacity: 1, tracking: "0.2em" }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            className="text-gold-light text-sm md:text-base uppercase mb-4"
+          >
+            Premium Nightlife Experience
+          </motion.p>
 
-<motion.p 
-initial={{ opacity: 0, tracking: "0em" }}
-animate={{ opacity: 1, tracking: "0.2em" }}
-transition={{ duration: 1.2, delay: 0.2 }}
-className="text-gold-light text-sm md:text-base uppercase mb-4"
->
-Premium Nightlife Experience
-</motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-[Cinzel] text-white mb-6 tracking-wider drop-shadow-2xl"
+          >
+            ENTER LABIRINT
+          </motion.h1>
 
-<motion.h1
-initial={{ opacity: 0, y: 20 }}
-animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 1, delay: 0.5 }}
-className="text-5xl md:text-7xl lg:text-8xl font-[Cinzel] text-white mb-6 tracking-wider drop-shadow-2xl"
->
-ENTER LABIRINT
-</motion.h1>
-
-<motion.p
-initial={{ opacity: 0 }}
-animate={{ opacity: 1 }}
-transition={{ duration: 1, delay: 1 }}
-className="text-sm md:text-base text-gold-light tracking-[0.25em] uppercase mb-12"
->
-VIP Nightlife • Private Events • Bachelor Parties
-</motion.p> 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-12 max-w-xl mx-auto"
+            className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-4"
           >
-            Luxury Gentlemen’s Club in Bucharest
+            Luxury Gentlemen's Club in Bucharest
           </motion.p>
-          
-          <motion.div 
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="text-sm md:text-base text-gold-light tracking-[0.25em] uppercase mb-12"
+          >
+            VIP Nightlife • Private Events • Bachelor Parties
+          </motion.p>
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.1 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="px-8 py-4 bg-gold-gradient text-black font-semibold tracking-widest uppercase text-sm hover:scale-105 transition-transform duration-300"
             >
               Reserve Now
@@ -87,9 +88,9 @@ VIP Nightlife • Private Events • Bachelor Parties
             </Link>
           </motion.div>
         </div>
-        
+
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
@@ -106,8 +107,8 @@ VIP Nightlife • Private Events • Bachelor Parties
             <h2 className="text-4xl md:text-5xl font-serif text-gold-gradient mb-8">About LABIRINT</h2>
             <div className="w-12 h-[1px] bg-gold-gradient mx-auto mb-10"></div>
             <p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light">
-              “LABIRINT is an exclusive gentlemen’s club offering a premium nightlife experience in Bucharest. 
-Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettable nights in one of the most exclusive VIP nightlife destinations in the city.”
+              “LABIRINT is an exclusive gentlemen’s club offering a premium nightlife experience in Bucharest.
+              Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettable nights in one of the most exclusive VIP nightlife destinations in the city.”
             </p>
             <p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
               18+ Only
@@ -154,25 +155,24 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-serif text-center text-white mb-16">The Experience</h2>
           </FadeIn>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[gallery1, gallery2, gallery3, gallery4].map((img, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="group relative aspect-square overflow-hidden cursor-pointer">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500 z-10"></div>
-                  <img 
-                    src={img} 
-                    alt={`Gallery ${i+1}`} 
+                  <img
+                    src={img}
+                    alt={`Gallery ${i + 1}`}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                 </div>
               </FadeIn>
             ))}
-            
-            {/* Additional placeholder spots to complete the grid */}
+
             <FadeIn delay={0.4}>
               <div className="group relative aspect-square overflow-hidden bg-white/5 flex items-center justify-center">
-                 <p className="text-white/30 font-serif tracking-widest uppercase">More Coming Soon</p>
+                <p className="text-white/30 font-serif tracking-widest uppercase">More Coming Soon</p>
               </div>
             </FadeIn>
           </div>
@@ -183,68 +183,69 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
       <section id="contact" className="py-32 px-6 bg-gradient-to-b from-black to-[#050505]">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16">
-            
-            {/* Location */}
-            {/* Find Us */}
-<FadeIn>
-  <h2 className="text-4xl font-serif text-white mb-8">Find Us</h2>
-  <div className="w-12 h-[1px] bg-gold-gradient mb-8"></div>
+            <FadeIn>
+              <h2 className="text-4xl font-serif text-white mb-8">Find Us</h2>
+              <div className="w-12 h-[1px] bg-gold-gradient mb-8"></div>
 
-  <p className="text-white/70 mb-8 text-lg">
-    Located in the heart of Bucharest.
-  </p>
+              <p className="text-white/70 mb-8 text-lg">
+                Located in the heart of Bucharest.
+              </p>
 
-  <div className="relative w-full aspect-video border border-gold-light/20 overflow-hidden group">
+              <div className="relative w-full aspect-video border border-gold-light/20 overflow-hidden group">
+                <iframe
+                  src="https://www.google.com/maps?q=Clopotarii+Vechi+3+Bucuresti&output=embed"
+                  className="absolute inset-0 w-full h-full grayscale contrast-125 brightness-75"
+                  loading="lazy"
+                ></iframe>
 
-    <iframe
-      src="https://www.google.com/maps?q=Clopotarii+Vechi+3+Bucuresti&output=embed"
-      className="absolute inset-0 w-full h-full grayscale contrast-125 brightness-75"
-      loading="lazy"
-    ></iframe>
+                <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+                <div className="absolute inset-0 border border-gold-light/30 group-hover:border-gold-light transition-colors duration-500"></div>
 
-    {/* dark luxury overlay */}
-    <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+                <a
+                  href="https://www.google.com/maps?q=Clopotarii+Vechi+3+Bucuresti"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-4 right-4 px-4 py-2 text-xs tracking-widest uppercase bg-black/70 border border-gold-light/40 text-white hover:bg-gold-light hover:text-black transition-all duration-300"
+                >
+                  Open in Maps
+                </a>
+              </div>
+            </FadeIn>
 
-    {/* gold glow border */}
-    <div className="absolute inset-0 border border-gold-light/30 group-hover:border-gold-light transition-colors duration-500"></div>
-
-    {/* open maps button */}
-    <a
-      href="https://www.google.com/maps?q=Clopotarii+Vechi+3+Bucuresti"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="absolute bottom-4 right-4 px-4 py-2 text-xs tracking-widest uppercase bg-black/70 border border-gold-light/40 text-white hover:bg-gold-light hover:text-black transition-all duration-300"
-    >
-      Open in Maps
-    </a>
-
-  </div>
-</FadeIn>
-
-            {/* Contact */}
             <FadeIn delay={0.2}>
               <h2 className="text-4xl font-serif text-white mb-8">Reservations</h2>
               <div className="w-12 h-[1px] bg-gold-gradient mb-8"></div>
               <p className="text-white/70 mb-12 text-lg">
                 For reservations and private bookings contact us:
               </p>
-              
+
               <div className="space-y-8">
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Phone</p>
-                  <a href="tel:+40768526104" className="text-2xl text-white hover:text-gold-light transition-colors">+40768526104</a>
+                  <a href="tel:+40768526104" className="text-2xl text-white hover:text-gold-light transition-colors">
+                    +40768526104
+                  </a>
                 </div>
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">WhatsApp</p>
-                  <a href="https://wa.me/40768526104?text=Hello%20I%20want%20to%20make%20a%20reservation" className="text-2xl text-white hover:text-gold-light transition-colors">+40768526104</a>
+                  <a
+                    href="https://wa.me/40768526104?text=Hello%20I%20want%20to%20make%20a%20reservation"
+                    className="text-2xl text-white hover:text-gold-light transition-colors"
+                  >
+                    +40768526104
+                  </a>
                 </div>
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Instagram</p>
-                  <a href="https://www.instagram.com/club.lab1rint?igsh=MWZsNmV3eGxybTZveQ%3D%3D&utm_source=qr" className="text-2xl text-white hover:text-gold-light transition-colors">@club_lab1rint</a>
+                  <a
+                    href="https://www.instagram.com/club.lab1rint?igsh=MWZsNmV3eGxybTZveQ%3D%3D&utm_source=qr"
+                    className="text-2xl text-white hover:text-gold-light transition-colors"
+                  >
+                    @club_lab1rint
+                  </a>
                 </div>
               </div>
             </FadeIn>
-            
           </div>
         </div>
       </section>
