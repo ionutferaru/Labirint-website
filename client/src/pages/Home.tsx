@@ -55,15 +55,6 @@ ENTER LABIRINT
 <motion.p
 initial={{ opacity: 0 }}
 animate={{ opacity: 1 }}
-transition={{ duration: 1, delay: 0.8 }}
-className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-4"
->
-Luxury Gentlemen's Club in Bucharest
-</motion.p>
-
-<motion.p
-initial={{ opacity: 0 }}
-animate={{ opacity: 1 }}
 transition={{ duration: 1, delay: 1 }}
 className="text-sm md:text-base text-gold-light tracking-[0.25em] uppercase mb-12"
 >
