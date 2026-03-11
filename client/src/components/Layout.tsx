@@ -32,10 +32,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/">
-            <a className="font-serif text-2xl tracking-widest text-white hover:text-gold-light transition-colors">
-              LABIRINT TEST
-            </a>
-          </Link>
+  <a className="flex flex-col items-start leading-tight">
+    
+    <span className="font-serif text-2xl tracking-[0.25em] text-white hover:text-gold-light transition-colors">
+      LABIRINT
+    </span>
+
+    <span className="text-[10px] tracking-[0.4em] text-white/50 uppercase font-light">
+      Gentlemen’s Club
+    </span>
+
+  </a>
+</Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-8 items-center text-sm tracking-wider uppercase text-white/80">
