@@ -105,7 +105,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <p className="text-white/50 text-sm tracking-widest uppercase">Premium Nightlife Experience</p>
           <div className="flex gap-6 mt-4">
             <a href="https://www.instagram.com/club.lab1rint" className="text-white/50 hover:text-gold-light transition-colors">Instagram</a>
-            <a href="https://wa.me/40768526104?text=Hello%20I%20would%20like%20to%20reserve%20a%20VIP%20table%20at%20LABIRINT%20Gentlemen's%20Club%20for%20__%20people%20tonight." className="text-white/50 hover:text-gold-light transition-colors">WhatsApp</a>
+            <a href="https://wa.me/40768526104?text=Hello%20I%20would%20like%20to%20reserve%20table%20at%20LABIRINT%20Gentlemen's%20Club%20for%20__%20people%20tonight." className="text-white/50 hover:text-gold-light transition-colors">WhatsApp</a>
             <a href="tel:+40768526104" className="text-white/50 hover:text-gold-light transition-colors">Contact</a>
           </div>
           <p className="text-white/30 text-xs mt-12 tracking-widest">
