@@ -223,7 +223,7 @@ export default function Home() {
                 <div>
                   <p className="text-white/40 text-sm tracking-widest uppercase mb-2">Phone</p>
                   <a href="tel:+40768526104" className="text-2xl text-white hover:text-gold-light transition-colors">
-                    +40768526104
+                    Call Us
                   </a>
                 </div>
                 <div>
