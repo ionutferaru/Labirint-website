@@ -107,8 +107,9 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-serif text-gold-gradient mb-8">About LABIRINT</h2>
             <div className="w-12 h-[1px] bg-gold-gradient mx-auto mb-10"></div>
             <p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light">
-              “LABIRINT is an exclusive gentlemen’s club offering a premium nightlife experience in Bucharest.
-              Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettable nights in one of the most exclusive VIP nightlife destinations in the city.”
+              “LABIRINT is an exclusive gentlemen’s club and one of the most luxurious strip clubs in Bucharest, offering a premium nightlife experience in the city.
+
+Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettable nights in one of the most exclusive VIP nightlife destinations in Bucharest.”
             </p>
             <p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
               18+ Only
