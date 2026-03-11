@@ -235,7 +235,8 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
                     href="https://wa.me/40768526104?text=Hello%20I%20want%20to%20make%20a%20reservation"
                     className="text-2xl text-white hover:text-gold-light transition-colors"
                   >
-                    +40768526104
+                   Chat on WhatsApp
+                    
                   </a>
                 </div>
                 <div>
