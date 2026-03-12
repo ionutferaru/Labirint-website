@@ -46,7 +46,7 @@ export default function Menu() {
     {
       title: "WHISKY - STICLA (700ml)",
       items: [
-        { name: "Jack Daniel’s", price: "400 lei" },
+        { name: "Jack Daniel’s", price: "450 lei" },
         { name: "Jameson", price: "350 lei" },
         { name: "Chivas Regal 12", price: "500 lei" },
         { name: "Black Label", price: "500 lei" },
