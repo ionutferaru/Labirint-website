@@ -109,17 +109,17 @@ export default function Menu() {
     {
       title: "LONG DRINKS",
       items: [
-        { name: "Vodka + Cola", price: "45 lei" },
-        { name: "Vodka + Sprite", price: "45 lei" },
-        { name: "Vodka + Red Bull", price: "45 lei" },
-        { name: "Vodka + Tonic", price: "45 lei" },
-        { name: "Whisky + Cola", price: "45 lei" },
-        { name: "Whisky + Red Bull", price: "45 lei" },
-        { name: "Gin + Tonic", price: "45 lei" },
-        { name: "Gin + Tonic + Lime", price: "45 lei" },
-        { name: "Gin + Tonic + Portocala", price: "45 lei" },
-        { name: "Gin + Sprite + Lime", price: "45 lei" },
-        { name: "Cuba Libre", price: "45 lei" },
+        { name: "Vodka + Cola", price: "50 lei" },
+        { name: "Vodka + Sprite", price: "50 lei" },
+        { name: "Vodka + Red Bull", price: "50 lei" },
+        { name: "Vodka + Tonic", price: "50 lei" },
+        { name: "Whisky + Cola", price: "50 lei" },
+        { name: "Whisky + Red Bull", price: "50 lei" },
+        { name: "Gin + Tonic", price: "50 lei" },
+        { name: "Gin + Tonic + Lime", price: "50 lei" },
+        { name: "Gin + Tonic + Portocala", price: "50 lei" },
+        { name: "Gin + Sprite + Lime", price: "50 lei" },
+        { name: "Cuba Libre", price: "50 lei" },
       ]
     },
     {
