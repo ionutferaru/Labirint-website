@@ -44,7 +44,7 @@ export default function Menu() {
       ]
     },
     {
-      title: "WHISKY - STICLA (700ml)",
+      title: "WHISKY - Bottle (700ml)",
       items: [
         { name: "Jack Daniel’s", price: "450 lei" },
         { name: "Jameson", price: "350 lei" },
@@ -62,7 +62,7 @@ export default function Menu() {
       ]
     },
     {
-      title: "VODKA - STICLA (700ml)",
+      title: "VODKA - Bottle (700ml)",
       items: [
         { name: "Absolut", price: "350 lei" },
         { name: "Finlandia", price: "350 lei" },
