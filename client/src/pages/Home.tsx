@@ -115,6 +115,12 @@ Strip Club Bucharest | LABIRINT Gentlemen's Club
 Located in the center of Bucharest, LABIRINT is a top destination for VIP nightlife, bachelor parties and private events.
 
 Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettable nights in one of the most exclusive VIP nightlife destinations in Bucharest.”
+
+LABIRINT is one of the most exclusive strip clubs in Bucharest, offering a premium VIP nightlife experience in the city. Located in the heart of Bucharest, LABIRINT Gentlemen's Club is a top destination for bachelor parties, private events and unforgettable nights.
+
+Guests can enjoy an elegant atmosphere, signature drinks and beautiful performers in one of the most luxurious gentlemen's clubs in Bucharest.
+
+
             </p>
             <p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
               18+ Only
