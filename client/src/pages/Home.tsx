@@ -66,7 +66,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 1 }}
             className="text-sm md:text-base text-gold-light tracking-[0.25em] uppercase mb-12"
           >
-            VIP Nightlife • Private Events • Bachelor Parties
+            Birthday Celebrations • Private Events • Bachelor Parties
           </motion.p>
 
           <motion.div
