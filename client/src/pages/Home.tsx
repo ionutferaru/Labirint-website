@@ -117,23 +117,23 @@ LABIRINT is an exclusive gentlemen's club and one of the most luxurious strip cl
 Located in the center of Bucharest, the club is a top destination for:
 </p>
 
-<ul className="space-y-4 mb-6">
-  <li className="flex items-center gap-4 text-white/80 text-xl md:text-2xl font-light">
+<ul className="space-y-5 mb-6">
+  <li className="flex items-center gap-2 text-white/80 text-lg md:text-2xl font-light">
     <span className="w-2 h-2 rounded-full bg-gold-light"></span>
     VIP nightlife experiences
   </li>
 
-  <li className="flex items-center gap-4 text-white/80 text-xl md:text-2xl font-light">
+  <li className="flex items-center gap-2 text-white/80 text-lg md:text-2xl font-light">
     <span className="w-2 h-2 rounded-full bg-gold-light"></span>
     Bachelor parties and private events
   </li>
 
-  <li className="flex items-center gap-4 text-white/80 text-xl md:text-2xl font-light">
+  <li className="flex items-center gap-2 text-white/80 text-lg md:text-2xl font-light">
     <span className="w-2 h-2 rounded-full bg-gold-light"></span>
     Luxury gentlemen's club entertainment
   </li>
 
-  <li className="flex items-center gap-4 text-white/80 text-xl md:text-2xl font-light">
+  <li className="flex items-center gap-2 text-white/80 text-lg md:text-2xl font-light">
     <span className="w-2 h-2 rounded-full bg-gold-light"></span>
     Unforgettable nights in Bucharest
   </li>
@@ -170,7 +170,7 @@ Whether you are planning a bachelor party, celebrating a special occasion or sim
                 <h2 className="text-4xl md:text-5xl font-serif text-white mb-8">Private Events & Bachelor Parties</h2>
                 <ul className="space-y-6 mb-10">
                   {['Bachelor Parties', 'Private Events', 'Birthday Celebrations', 'VIP Group Nights'].map((item, i) => (
-                    <li key={i} className="flex items-center gap-4 text-white/70 text-lg">
+                    <li key={i} className="flex items-center gap-2 text-white/70 text-lg">
                       <span className="w-2 h-2 rounded-full bg-gold-light"></span>
                       {item}
                     </li>
