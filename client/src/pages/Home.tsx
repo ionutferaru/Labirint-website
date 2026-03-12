@@ -116,6 +116,16 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
             <p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
               18+ Only
             </p>
+<p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
+18+ Only
+</p>
+
+<a
+  href="/strip-club-bucharest"
+  className="inline-block mt-6 text-gold-light hover:text-white transition-colors"
+>
+  Learn more about the best strip club in Bucharest
+</a>
           </FadeIn>
         </div>
       </section>
