@@ -78,7 +78,7 @@ export default function Menu() {
       ]
     },
     {
-      title: "VIN - STICLA",
+      title: "Wine - Bottle",
       items: [
         { name: "Castel Huniade", price: "160 lei" },
         { name: "Caii de la Letea", price: "180 lei" },
@@ -123,7 +123,7 @@ export default function Menu() {
       ]
     },
     {
-      title: "BERE",
+      title: "BEER",
       items: [
         { name: "Heineken", price: "25 lei" },
         { name: "Ursus", price: "20 lei" },
@@ -142,7 +142,7 @@ export default function Menu() {
       ]
     },
     {
-      title: "ENERGIZANT",
+      title: "Energy Drinks",
       items: [
         { name: "Red Bull", price: "25 lei" },
         { name: "fi-GA", price: "35 lei" },
