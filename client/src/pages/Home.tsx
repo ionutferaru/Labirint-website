@@ -130,11 +130,6 @@ Located in the center of Bucharest, the club is a top destination for:
 
   <li className="flex items-center gap-2 text-white/80 text-lg md:text-2xl font-light">
     <span className="w-2 h-2 rounded-full bg-gold-light"></span>
-    Luxury gentlemen's club entertainment
-  </li>
-
-  <li className="flex items-center gap-2 text-white/80 text-lg md:text-2xl font-light">
-    <span className="w-2 h-2 rounded-full bg-gold-light"></span>
     Unforgettable nights in Bucharest
   </li>
 </ul>
