@@ -25,7 +25,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src={heroImg}
-            alt="LABIRINT Club Interior"
+            alt="LABIRINT Gentlemen's Club interior Bucharest luxury strip club"
             className="w-full h-full object-cover opacity-60 scale-105 transform hover:scale-100 transition-transform duration-[10s] ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
@@ -33,6 +33,9 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center px-6 mt-20">
+<h1 className="hidden">
+Strip Club Bucharest | LABIRINT Gentlemen's Club
+</h1>
           <motion.p
             initial={{ opacity: 0, tracking: "0em" }}
             animate={{ opacity: 1, tracking: "0.2em" }}
