@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Menu from "@/pages/Menu";
 import Layout from "@/components/Layout";
+import StripClubBucharest from "@/pages/StripClubBucharest";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/menu" component={Menu} />
+        <Route path="/strip-club-bucharest" component={StripClubBucharest} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
