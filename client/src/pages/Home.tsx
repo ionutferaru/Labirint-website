@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import heroImg from "@/assets/images/hero.png";
 import gallery1 from "@/assets/images/gallery-1.png";
-import gallery2 from "@/assets/images/gallery-2.png";
+import gallery2 from "@/assets/images/labirint-strip-club-bucharest-vip-lounge.png";
 import gallery3 from "@/assets/images/gallery-3.png";
 import gallery4 from "@/assets/images/gallery-4.png";
 
