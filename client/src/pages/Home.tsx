@@ -205,7 +205,7 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
                 <div className="absolute inset-0 border border-gold-light/30 group-hover:border-gold-light transition-colors duration-500"></div>
 
                 <a
-                  href="https://www.google.com/maps?q=Clopotarii+Vechi+3+Bucuresti"
+                  href="https://www.google.com/maps?q=Clopotarii+Vechi+3"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="absolute bottom-4 right-4 px-4 py-2 text-xs tracking-widest uppercase bg-black/70 border border-gold-light/40 text-white hover:bg-gold-light hover:text-black transition-all duration-300"
