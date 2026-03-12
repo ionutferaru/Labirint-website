@@ -116,9 +116,6 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
             <p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
               18+ Only
             </p>
-<p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
-18+ Only
-</p>
 
 <a
   href="/strip-club-bucharest"
