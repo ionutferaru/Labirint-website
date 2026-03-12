@@ -109,22 +109,43 @@ Strip Club Bucharest | LABIRINT Gentlemen's Club
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-serif text-gold-gradient mb-8">About LABIRINT</h2>
             <div className="w-12 h-[1px] bg-gold-gradient mx-auto mb-10"></div>
-            <p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light">
-              “LABIRINT is an exclusive gentlemen's club and one of the most luxurious strip clubs in Bucharest, offering a premium nightlife experience in the city.
+            <p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light mb-6">
+LABIRINT is an exclusive gentlemen's club and one of the most luxurious strip clubs in Bucharest, offering a premium nightlife experience in the city.
+</p>
 
+<p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light mb-6">
 Located in the center of Bucharest, the club is a top destination for:
+</p>
 
-• VIP nightlife experiences  
-• Bachelor parties and private events  
-• Luxury gentlemen's club entertainment  
-• Unforgettable nights in Bucharest  
+<ul className="space-y-4 mb-6">
+  <li className="flex items-center gap-4 text-white/80 text-xl md:text-2xl font-light">
+    <span className="w-2 h-2 rounded-full bg-gold-light"></span>
+    VIP nightlife experiences
+  </li>
 
+  <li className="flex items-center gap-4 text-white/80 text-xl md:text-2xl font-light">
+    <span className="w-2 h-2 rounded-full bg-gold-light"></span>
+    Bachelor parties and private events
+  </li>
+
+  <li className="flex items-center gap-4 text-white/80 text-xl md:text-2xl font-light">
+    <span className="w-2 h-2 rounded-full bg-gold-light"></span>
+    Luxury gentlemen's club entertainment
+  </li>
+
+  <li className="flex items-center gap-4 text-white/80 text-xl md:text-2xl font-light">
+    <span className="w-2 h-2 rounded-full bg-gold-light"></span>
+    Unforgettable nights in Bucharest
+  </li>
+</ul>
+
+<p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light mb-6">
 Guests can enjoy signature drinks, an elegant atmosphere and beautiful performers while experiencing one of the most exclusive VIP nightlife destinations in the city.
+</p>
 
+<p className="text-xl md:text-2xl leading-relaxed text-white/80 font-light">
 Whether you are planning a bachelor party, celebrating a special occasion or simply looking for a luxury strip club in Bucharest, LABIRINT Gentlemen's Club offers an unforgettable nightlife experience.
-
-
-            </p>
+</p>
             <p className="mt-8 text-gold-light/60 tracking-widest uppercase text-sm font-semibold">
               18+ Only
             </p>
