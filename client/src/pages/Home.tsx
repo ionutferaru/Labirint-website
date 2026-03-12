@@ -151,7 +151,7 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
                 </a>
               </div>
               <div className="relative aspect-square md:aspect-[4/5]">
-                <img src={gallery2} alt="VIP Lounge" className="w-full h-full object-cover opacity-80" />
+                <img src={gallery2} alt="VIP lounge at LABIRINT strip club Bucharest" className="w-full h-full object-cover opacity-80" />
                 <div className="absolute inset-0 border border-gold-light/20 scale-[0.95]"></div>
               </div>
             </div>
