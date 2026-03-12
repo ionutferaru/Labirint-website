@@ -119,9 +119,9 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
 
 <a
   href="/strip-club-bucharest"
-  className="inline-block mt-6 text-gold-light hover:text-white transition-colors"
+  className="inline-block mt-10 font-serif text-gold-gradient text-xl tracking-widest hover:opacity-80 transition-opacity"
 >
-  Learn more about the best strip club in Bucharest
+  Best Strip Club in Bucharest
 </a>
           </FadeIn>
         </div>
