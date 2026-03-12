@@ -196,7 +196,7 @@ Enjoy signature drinks, elegant atmosphere, beautiful performers and unforgettab
 
               <div className="relative w-full aspect-video border border-gold-light/20 overflow-hidden group">
                 <iframe
-                  src="https://www.google.com/maps?q=Clopotarii+Vechi+3+Bucuresti&output=embed"
+                  src="https://www.google.com/maps?q=Clopotarii+Vechi+3&output=embed"
                   className="absolute inset-0 w-full h-full grayscale contrast-125 brightness-75"
                   loading="lazy"
                 ></iframe>
