@@ -151,6 +151,13 @@ Whether you are planning a bachelor party, celebrating a special occasion or sim
 >
   Best Strip Club in Bucharest
 </a>
+
+<a
+  href="/bachelor-party-bucharest"
+  className="inline-block mt-4 font-serif text-gold-gradient text-xl tracking-widest hover:opacity-80 transition-opacity"
+>
+  Best Bachelor Party in Bucharest
+</a>
           </FadeIn>
         </div>
       </section>
