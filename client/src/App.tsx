@@ -8,16 +8,18 @@ import Home from "@/pages/Home";
 import Menu from "@/pages/Menu";
 import Layout from "@/components/Layout";
 import StripClubBucharest from "@/pages/StripClubBucharest";
+import BachelorPartyBucharest from "@/pages/BachelorPartyBucharest";
 
 function Router() {
   return (
     <Layout>
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/menu" component={Menu} />
-        <Route path="/strip-club-bucharest" component={StripClubBucharest} />
-        <Route component={NotFound} />
-      </Switch>
+  <Route path="/" component={Home} />
+  <Route path="/menu" component={Menu} />
+  <Route path="/strip-club-bucharest" component={StripClubBucharest} />
+  <Route path="/bachelor-party-bucharest" component={BachelorPartyBucharest} />
+  <Route component={NotFound} />
+</Switch>
     </Layout>
   );
 }
